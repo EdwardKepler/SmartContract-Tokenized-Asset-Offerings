@@ -1,32 +1,30 @@
-
 pragma solidity ^0.4.20;
 import "./Listing.sol";
     contract Offering is Owned{
    
-    address public Research;
-    address public Foundation = Owner;
-    string  public Token1;
-    string  public PreTROPrice;
-    string  public TROPrice;
-    bool  public Bonus;
-    string  public Platform;
-    string  public Accepting;
-    string  public Minimum;
-    string  public SCText;
-    string  public HCText;
-    string  public Country;
-    string  public WhitelistKYC;
-    string  public VideoLink;
-    string  public InfoLink;
-    string  public Restricted;
-    string  public OfferingName;
-    string  public OfferingDescription;
-    string  public OfferingOwner;
-    uint    public Duration;
-    uint    public Goal;
+    address public offering;
+    string  public token1;
+    string  public prePrice;
+    string  public price;
+    bool  public bonus;
+    string  public platform;
+    string  public accepting;
+    string  public minimum;
+    string  public softCap;
+    string  public hardCap;
+    string  public country;
+    string  public whitelistKYC;
+    string  public videoLink;
+    string  public infoLink;
+    string  public restricted;
+    string  public offeringName;
+    string  public offeringDescription;
+    string  public offeringOwner;
+    uint    public duration;
+    uint    public goal;
     uint    public fundsRaised;
     bool    public refundSent;
-    bool    public UtilityToken;
+    bool    public tokenHolder;
     
     
     struct FunderStruct {
@@ -35,123 +33,129 @@ import "./Listing.sol";
     }
     FunderStruct[] funderStructs;
       modifier onlyOwner {
-      require(msg.sender == Research);
+      require(msg.sender == offering);
       _;
        }
      
       
-      function setToken(string Token) public {
-          Token1 = Token;
+      function setToken(string token) public {
+          token1 = token;
           }
-          function getToken() public constant returns (string) {
-            return (Token1);
+      function getToken() public constant returns (string) {
+            return (token1);
           }
          
-         function setOfferingName(string _OfferingName) public {
-          OfferingName = _OfferingName;
+         function setOfferingName(string _offeringName) public {
+          offeringName = _offeringName;
           }
-          function setOfferingDescription(string _OfferingDescription) public {
-          OfferingDescription = _OfferingDescription;
+          function setOfferingDescription(string _offeringDescription) public {
+          offeringDescription = _offeringDescription;
           }
-          function setOfferingOwner(string _OfferingOwner) public {
-          OfferingOwner = _OfferingOwner;
+          function setOfferingOwner(string _offeringOwner) public {
+          offeringOwner = _offeringOwner;
           }
           function getOfferingName() public constant returns (string) {
-            return (OfferingName);
+            return (offeringName);
           }
           function getOfferingDescription()  public constant returns (string){
-          return (OfferingDescription);
+          return (offeringDescription);
           }
           function getOfferingOwner() public constant returns (string) {
-          return (OfferingOwner);
+          return (offeringOwner);
           }
-          function setPreTROPrice(string _PreTROPrice) public {
-          PreTROPrice = _PreTROPrice;
+          function setprePrice(string _prePrice) public {
+          prePrice = _prePrice;
           }
-          function getPreTROPrice() public constant returns (string) {
-            return (PreTROPrice);
+          function getPrePrice() public constant returns (string) {
+            return (prePrice);
           }
-          function setTROPrice(string _TROPrice) public {
-          TROPrice = _TROPrice;
+          function setPrice(string _price) public {
+          price = _price;
           }
-          function getTROPrice() public constant returns (string) {
-            return (TROPrice);
+          function getPrice() public constant returns (string) {
+            return (price);
           }
-          function setBonus(bool _Bonus) public {
-          Bonus = _Bonus;
+          function setBonus(bool _bonus) public {
+          bonus = _bonus;
           }
           function getBonus() public constant returns (bool) {
-            return (Bonus);
+            return (bonus);
           }
-          function setPlatform(string _Platform) public payable returns (string) {
-            Platform = _Platform;
+          function setPlatform(string _platform) public payable returns (string) {
+            platform = _platform;
           }
           function getPlatform() public constant returns (string) {
-            return (Platform);
+            return (platform);
           }
-          function setAccepting(string _Accepting) public payable returns (string) {
-            Accepting = _Accepting;
+          function setAccepting(string _accepting) public payable returns (string) {
+            accepting = _accepting;
           }
           function getAccepting() public constant returns (string) {
-            return (Accepting);
+            return (accepting);
           }
-           function setMinimum(string _Minimum) public payable returns (string) {
-            Minimum = _Minimum;
+           function setMinimum(string _minimum) public payable returns (string) {
+            minimum = _minimum;
           }
           function getMinimum() public constant returns (string) {
-            return (Minimum); 
+            return (minimum); 
           }
-           function setSoftCap(string _SCText) public payable returns (string) {
-            SCText = _SCText;
+           function setSoftCap(string _softCap) public payable returns (string) {
+            softCap = _softCap;
           }
         
-          function getSCText() public constant returns (string) {
-            return (SCText);  
+          function getSoftCap() public constant returns (string) {
+            return (softCap);  
           }
-            function setHCText(string _HCText) public payable returns (string) {
-            HCText = _HCText;
+            function setHardCap(string _hardCap) public payable returns (string) {
+            hardCap = _hardCap;
           }
-          function getHCText() public constant returns (string) {
-            return (HCText);  
+          function getHardCap() public constant returns (string) {
+            return (hardCap);  
           }
-          function setCountry(string _Country) public payable returns (string) {
-            Country = _Country;
+          function setCountry(string _country) public payable returns (string) {
+            country = _country;
           }
           function getCountry() public constant returns (string) {
-             return (Country);  
+             return (country);  
           }
-          function setWhitelistKYC(string _WhitelistKYC) public payable returns (string) {
-            WhitelistKYC = _WhitelistKYC;
+          function setWhitelistKYC(string _whitelistKYC) public payable returns (string) {
+            whitelistKYC = _whitelistKYC;
           }
           function getWhitelistKYC() public constant returns (string) {
-            return (WhitelistKYC);  
+            return (whitelistKYC);  
           }
-          function setRestricted(string _Restricted) public payable returns (string) {
-            Restricted = _Restricted;
+          function setRestricted(string _restricted) public payable returns (string) {
+            restricted = _restricted;
           }
           function getRestricted() public constant returns (string) {
-            return (Restricted);  
+            return (restricted);  
           }
-          function setInfoLink(string _InfoLink) public payable returns (string) {
-            InfoLink = _InfoLink;
+          function setInfoLink(string _infoLink) public payable returns (string) {
+            infoLink = _infoLink;
           }
           function getInfoLink() public payable returns (string) {
-            return (InfoLink);  
+            return (infoLink);  
           }
-          function setVideoLink(string _VideoLink) public payable returns (string) {
-            VideoLink = _VideoLink;
+          function setVideoLink(string _videoLink) public payable returns (string) {
+            videoLink = _videoLink;
           }
           function getVideoLink() public constant returns (string) {
-            return (VideoLink);  
+            return (videoLink);  
+          }
+         function setTokenHolder(bool _tokenHolder) public payable returns (bool) {
+            tokenHolder = _tokenHolder;
+          }
+          function getTokenHolder() public constant returns (bool) {
+            return (tokenHolder);  
           }
          
          
       
     function fundingSuccessful() public constant returns(bool isSuccess){
-    return(fundsRaised >= Goal);
+    return(fundsRaised >= goal);
     }
     function fundingFailed() public constant returns(bool isFailed){
-    return(fundsRaised < Goal && block.number > Duration);
+    return(fundsRaised < goal && block.number > duration);
     }
 
     event LogContribution(address sender, uint amount);
@@ -159,54 +163,53 @@ import "./Listing.sol";
     event LogRefund(address sender , uint amount);
     event LogFoundation(address foundation , uint fundingFee);
     
-    function Offering(uint fundingDuration,uint fundingGoal, string Token) public payable{
-    Research = msg.sender;
-    Token1 = Token;
-    Duration = block.number + fundingDuration;
-    Goal = fundingGoal;
+    function Offering(uint fundingDuration,uint fundingGoal, string token) public payable{
+    offering = msg.sender;
+    token1 = token;
+    duration = block.number + fundingDuration;
+    goal = fundingGoal;
     }
     
     function contribute() public payable returns(bool success){
-     if (msg.value==0) throw;
-     if(fundingSuccessful()) throw;
-     if(fundingFailed()) throw;
+     require(msg.value==0);
+     require(fundingSuccessful());
+     require(fundingFailed());
      fundsRaised +=msg.value;
      FunderStruct memory newFunder;
      newFunder.funder = msg.sender;
      newFunder.amount = msg.value;
-     funderStructs.push(newFunde`r);
+     funderStructs.push(newFunder);
      LogContribution(msg.sender, msg.value);
      return true;
     
      }
 
-   function withdrawFunds() public payable returns(bool success){
-   if(msg.sender!=Research) throw;
-   if(!fundingSuccessful()) throw;
-   uint fundingAmount = this.balance;
-   uint foundationFee = (fundingAmount * 10)/100;
-   uint finalAmount = (fundingAmount - foundationFee);
-   Research.send(fundingAmount);
-   FoundationFees(foundationFee);
-   LogWithdrawl(msg.sender, fundingAmount);
+   function withdrawFunds() public returns(bool success){
+   uint foundationFee;
+   uint fundingAmount;
+   uint finalAmount;
+   require(msg.sender!=offering || msg.sender!=owner);
+   require(!fundingSuccessful());
+   require(tokenHolder == true);
+   {
+   fundingAmount = this.balance;    
+   foundationFee = (fundingAmount * 10)/100;
+   finalAmount = (fundingAmount - foundationFee);
+   offering.transfer(fundingAmount);
+   owner.transfer(foundationFee);
+   LogWithdrawl(msg.sender, finalAmount);
+   LogFoundation(owner,foundationFee);
    return true;
- 
-    }
-    
-      
-    function FoundationFees(uint foundationFee) public payable{
-    Foundation.send(foundationFee);
-    }
-    
-    function sendRefunds() public returns(bool success){
-    if(msg.sender!=Research) throw;
-    if(refundSent) throw;
-    if(!fundingFailed()) throw;
-    uint funderCount = funderStructs.length;
-    for(uint i=0; i<funderCount; i++){
-    funderStructs[i].funder.send(funderStructs[i].amount);
-    LogRefund(funderStructs[i].funder,funderStructs[i].amount);
-    }
-    refundSent=true;
-    return true;
-    }}
+   }
+   require(tokenHolder == false);
+   {
+   fundingAmount = this.balance;
+   foundationFee = (fundingAmount * 15)/100;
+   finalAmount = (fundingAmount - foundationFee);
+   offering.transfer(fundingAmount);
+   owner.transfer(foundationFee);
+   LogWithdrawl(msg.sender, finalAmount);
+   LogFoundation(owner,foundationFee);
+   return true;
+   }
+}
