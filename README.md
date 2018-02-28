@@ -1,7 +1,7 @@
 # TAO Foundation
 ## Smart Contracts For Tokenized Asset Offerings
 
-**TAO Foundation** is a decentralized platform for creating and trading **Tokenized Asset Offerings [TAO]** with provide a liquid markets for Digital and Real Assets.
+**TAO Foundation** is a decentralized platform for creating and trading **Tokenized Asset Offerings [TAO]** which provide a liquid market for Digital and Real Assets.
 
 www.taofoundation.co
 
