@@ -19,7 +19,7 @@ function ChangeOwner(address NewOwner)
 OnlyOwner
 returns(bool success)
 {
-     if(NewOwner == 0) throw;
+     require(NewOwner == 0);
      Owner = NewOwner;
      LogNewOwner(Owner,NewOwner);
      return true;
