@@ -8,7 +8,7 @@ bool public Listed;
 event LogListingSwitch(bool switchSetting);
 
 modifier OnlyIfListed {
-    if(!Listed) throw;
+    require(!Listed);
     _;
 }
 function Listing(){
