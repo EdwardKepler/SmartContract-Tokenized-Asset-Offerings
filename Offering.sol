@@ -2,7 +2,7 @@ pragma solidity ^0.4.20;
 import "./Listing.sol";
     contract Offering is Owned{
    
-    address public offering;
+    address public offering = 0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db;
     string  public token1;
     string  public prePrice;
     string  public price;
@@ -36,8 +36,8 @@ import "./Listing.sol";
       require(msg.sender == offering);
       _;
        }
+       
      
-      
       function setToken(string token) public {
           token1 = token;
           }
@@ -148,7 +148,7 @@ import "./Listing.sol";
           function getTokenHolder() public constant returns (bool) {
             return (tokenHolder);  
           }
-         
+      
          
       
     function fundingSuccessful() public constant returns(bool isSuccess){
@@ -164,16 +164,16 @@ import "./Listing.sol";
     event LogFoundation(address foundation , uint fundingFee);
     
     function Offering(uint fundingDuration,uint fundingGoal, string token) public payable{
-    offering = msg.sender;
+    owner = Owned.owner;
     token1 = token;
     duration = block.number + fundingDuration;
     goal = fundingGoal;
     }
     
     function contribute() public payable returns(bool success){
-     require(msg.value==0);
-     require(fundingSuccessful());
-     require(fundingFailed());
+     if(msg.value==0) throw;
+     if(fundingSuccessful()) throw;
+     if(fundingFailed()) throw;
      fundsRaised +=msg.value;
      FunderStruct memory newFunder;
      newFunder.funder = msg.sender;
@@ -184,32 +184,47 @@ import "./Listing.sol";
     
      }
 
-   function withdrawFunds() public returns(bool success){
+   function withdrawFees() public payable returns(bool success)
+   {
    uint foundationFee;
    uint fundingAmount;
    uint finalAmount;
-   require(msg.sender!=offering || msg.sender!=owner);
-   require(!fundingSuccessful());
-   require(tokenHolder == true);
+   if(msg.sender != owner) throw;
+   if(!fundingSuccessful()) throw;
+   if(tokenHolder == true)
    {
+   fundingAmount = this.balance;    
+   foundationFee = (fundingAmount * 5)/100;
+   finalAmount = (fundingAmount - foundationFee);
+   owner.transfer(foundationFee);
+   LogFoundation(owner,foundationFee);
+   return true;
+   }
    fundingAmount = this.balance;    
    foundationFee = (fundingAmount * 10)/100;
    finalAmount = (fundingAmount - foundationFee);
-   offering.transfer(fundingAmount);
    owner.transfer(foundationFee);
-   LogWithdrawl(msg.sender, finalAmount);
    LogFoundation(owner,foundationFee);
    return true;
    }
-   require(tokenHolder == false);
-   {
-   fundingAmount = this.balance;
-   foundationFee = (fundingAmount * 15)/100;
-   finalAmount = (fundingAmount - foundationFee);
+   
+   function withdrawFunds() public payable returns(bool success){
+   
+   uint fundingAmount;
+   if(msg.sender != offering) throw;
+   if(!fundingSuccessful()) throw;
+   fundingAmount = this.balance;    
    offering.transfer(fundingAmount);
-   owner.transfer(foundationFee);
-   LogWithdrawl(msg.sender, finalAmount);
-   LogFoundation(owner,foundationFee);
+   LogFoundation(offering,fundingAmount);
    return true;
    }
-}
+   
+
+    
+    }
+                        
+    
+    
+    
+    
+    
