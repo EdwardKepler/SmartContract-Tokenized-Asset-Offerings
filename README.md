@@ -6,7 +6,7 @@
 www.taofoundation.co
 
 ## Digital Assets
-* Crypto-Currency
+* ITO [Initial Token Offering]
 * Digital Goods
 * Domain Names
 
@@ -16,7 +16,7 @@ www.taofoundation.co
 * Art
 * Precious Metals
 * IP
-* Research
+* Research . [ TRO-Offering.sol ]
 * Technology
 
 ## Token Features
