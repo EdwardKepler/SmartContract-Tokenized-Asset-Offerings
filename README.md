@@ -7,14 +7,14 @@ www.taofoundation.co
 
 ## Digital Assets
 * ITO (Initial Token Offering) [ ITO-Offering.sol ]
-* Digital Goods
-* Domain Names
+* Digital Goods [ TDO-Offering.sol ]
+* Domain Names  [ TNO-Offering.sol ]
 
 ## Real Assets
-* Land
-* Properties
+* Land [ TLO-Offering.sol ]
+* Properties [ TBO-Offering.sol ]
 * Art [ TGO-Offering.sol]
-* Precious Metals
+* Precious Metals [ TMO-Offering.sol ]
 * IP . [ TPO-Offering.sol]
 * Research   [ TRO-Offering.sol ]
 * Technology [ TTO-Offering.sol ]
