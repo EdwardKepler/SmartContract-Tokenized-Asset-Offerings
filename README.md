@@ -3,7 +3,7 @@
 
 **TAO Foundation** is a decentralized platform for creating and trading **Tokenized Asset Offerings [TAO]** which provide a liquid market for Digital and Real Assets.
 
-www.taofoundation.co
+  www.taofoundation.co
 
 ## Digital Assets
 * ITO (Initial Token Offering) [ ITO-Offering.sol ]
@@ -26,4 +26,4 @@ www.taofoundation.co
 * **Currency:** Payment, Transaction
 * **Earnings:** Profit Share, Benefit Share
 
-www.taotoken.co
+  www.taotoken.co
