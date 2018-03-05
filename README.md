@@ -15,7 +15,7 @@ www.taofoundation.co
 * Properties [ TBO-Offering.sol ]
 * Art [ TGO-Offering.sol]
 * Precious Metals [ TMO-Offering.sol ]
-* IP . [ TPO-Offering.sol]
+* IP  [ TPO-Offering.sol]
 * Research   [ TRO-Offering.sol ]
 * Technology [ TTO-Offering.sol ]
 
