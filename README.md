@@ -16,7 +16,7 @@ www.taofoundation.co
 * Art
 * Precious Metals
 * IP
-* Research . [ TRO-Offering.sol ]
+* Research  [ TRO-Offering.sol ]
 * Technology
 
 ## Token Features
