@@ -13,10 +13,10 @@ www.taofoundation.co
 ## Real Assets
 * Land
 * Properties
-* Art
+* Art [ TGO-Offering.sol]
 * Precious Metals
-* IP
-* Research  [ TRO-Offering.sol ]
+* IP . [ TPO-Offering.sol]
+* Research   [ TRO-Offering.sol ]
 * Technology [ TTO-Offering.sol ]
 
 ## Token Features
