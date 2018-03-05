@@ -1,5 +1,5 @@
 pragma solidity ^0.4.20;
-import "./Offering.sol";
+import "./TRO-Offering.sol";
 import "./Listing.sol";
 
 
