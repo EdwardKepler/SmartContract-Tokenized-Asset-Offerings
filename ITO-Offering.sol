@@ -1,7 +1,8 @@
 pragma solidity ^0.4.20;
 import "./Listing.sol";
     contract Offering is Owned{
-   
+    // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]
+    // Smart Contract For Initial Token Offering [ITO]
     address public offering = 0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db;
     string  public token1;
     string  public prePrice;
@@ -17,6 +18,11 @@ import "./Listing.sol";
     string  public videoLink;
     string  public infoLink;
     string  public restricted;
+    string  public assetName;
+    string  public assetType;
+    string  public assetDescription;
+    string  public assetIdentifier;
+    string  public assetDeliverable;
     string  public offeringName;
     string  public offeringDescription;
     string  public offeringOwner;
@@ -36,16 +42,26 @@ import "./Listing.sol";
       require(msg.sender == offering);
       _;
        }
-       
-     
-      function setToken(string token) public {
+           // [TAO] Tokenized Asset Offering 
+           // [TRO] Initial Token Offering
+           // Tokenized - [ITO,TDO,TNO,TTO,TRO,TLO,TPO,TMO,TGO,TPO]
+           
+          function setToken(string token) public {
           token1 = token;
           }
-      function getToken() public constant returns (string) {
-            return (token1);
+          function getToken() public constant returns (string) {
+          return (token1);
           }
-         
-         function setOfferingName(string _offeringName) public {
+          function setAddress(address _address) public {
+          offering = _address;
+          }
+          function getAddress() public constant returns (address) {
+          return (offering);
+          }       
+          
+            // Offering - Overview
+          
+          function setOfferingName(string _offeringName) public {
           offeringName = _offeringName;
           }
           function setOfferingDescription(string _offeringDescription) public {
@@ -142,7 +158,7 @@ import "./Listing.sol";
           function getVideoLink() public constant returns (string) {
             return (videoLink);  
           }
-         function setTokenHolder(bool _tokenHolder) public payable returns (bool) {
+          function setTokenHolder(bool _tokenHolder) public payable returns (bool) {
             tokenHolder = _tokenHolder;
           }
           function getTokenHolder() public constant returns (bool) {
@@ -164,6 +180,7 @@ import "./Listing.sol";
     event LogFoundation(address foundation , uint fundingFee);
     
     function Offering(uint fundingDuration,uint fundingGoal, string token) public payable{
+    //Create Offering
     owner = Owned.owner;
     token1 = token;
     duration = block.number + fundingDuration;
@@ -171,6 +188,7 @@ import "./Listing.sol";
     }
     
     function contribute() public payable returns(bool success){
+     //Contribute To Offering
      if(msg.value==0) throw;
      if(fundingSuccessful()) throw;
      if(fundingFailed()) throw;
@@ -186,6 +204,7 @@ import "./Listing.sol";
 
    function withdrawFees() public payable returns(bool success)
    {
+   //withdrawFees - Owner Only 
    uint foundationFee;
    uint fundingAmount;
    uint finalAmount;
@@ -209,7 +228,7 @@ import "./Listing.sol";
    }
    
    function withdrawFunds() public payable returns(bool success){
-   
+   // WithdrawFunds - Offering Originator Only
    uint fundingAmount;
    if(msg.sender != offering) throw;
    if(!fundingSuccessful()) throw;
@@ -219,13 +238,3 @@ import "./Listing.sol";
    return true;
    }
    
-
-    
-    }
-                        
-    
-    
-    
-    
-    
-
