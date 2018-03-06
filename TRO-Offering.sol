@@ -18,6 +18,11 @@ import "./Listing.sol";
     string  public videoLink;
     string  public infoLink;
     string  public restricted;
+    string  public assetName;
+    string  public assetType;
+    string  public assetDescription;
+    string  public assetIdentifier;
+    string  public assetDeliverable;
     string  public offeringName;
     string  public offeringDescription;
     string  public offeringOwner;
@@ -38,7 +43,7 @@ import "./Listing.sol";
       _;
        }
            // [TAO] Tokenized Asset Offering 
-           
+           // [TRO] Tokenized Research Offering
            // Tokenized - [ITO,TDO,TNO,TTO,TRO,TLO,TPO,TMO,TGO,TPO]
            
           function setToken(string token) public {
@@ -47,26 +52,26 @@ import "./Listing.sol";
           function getToken() public constant returns (string) {
           return (token1);
           }
-          function setAddress(string _address) public {
+          function setAddress(address _address) public {
           offering = _address;
           }
-          function getAddress() public constant returns (string) {
+          function getAddress() public constant returns (address) {
           return (offering);
           }
           
             // Asset - Overview
           
-          function setAssetName(string _AssetName) public {
-          AssetName = _AssetName;
+          function setAssetName(string _assetName) public {
+          assetName = _assetName;
           }
           function getAssetName() public constant returns (string) {
-          return (AssetName);
+          return (assetName);
           }
-          function setAssetType(string _AssetType) public {
-          AssetType = _AssetType;
+          function setAssetType(string _assetType) public {
+          assetType = _assetType;
           }
           function getAssetType() public constant returns (string) {
-          return (AssetType);
+          return (assetType);
           }
           function setAssetDescription(string _assetDescription) public {
           assetDescription = _assetDescription;
@@ -80,12 +85,13 @@ import "./Listing.sol";
           function getAssetIdentitiers() public constant returns (string) {
           return (assetIdentifier);
           }
-          function setAssetDeliverables(string _assetDeliverables) public {
-          assetDescription = _assetDescription;
+          function setResearchDeliverables(string _assetDeliverable) public {
+          assetDeliverable = _assetDeliverable;
           }
-          function getAssetDeliverables() public constant returns (string) {
-          return (assetDeliverables);
+          function getResearchDeliverables() public constant returns (string) {
+          return (assetDeliverable);
           }
+          
           
             // Offering - Overview
           
@@ -208,6 +214,7 @@ import "./Listing.sol";
     event LogFoundation(address foundation , uint fundingFee);
     
     function Offering(uint fundingDuration,uint fundingGoal, string token) public payable{
+    //Create Offering
     owner = Owned.owner;
     token1 = token;
     duration = block.number + fundingDuration;
@@ -215,6 +222,7 @@ import "./Listing.sol";
     }
     
     function contribute() public payable returns(bool success){
+     //Contribute To Offering
      if(msg.value==0) throw;
      if(fundingSuccessful()) throw;
      if(fundingFailed()) throw;
@@ -230,6 +238,7 @@ import "./Listing.sol";
 
    function withdrawFees() public payable returns(bool success)
    {
+   //withdrawFees - Owner Only 
    uint foundationFee;
    uint fundingAmount;
    uint finalAmount;
@@ -253,7 +262,7 @@ import "./Listing.sol";
    }
    
    function withdrawFunds() public payable returns(bool success){
-   
+   // WithdrawFunds - Offering Originator Only
    uint fundingAmount;
    if(msg.sender != offering) throw;
    if(!fundingSuccessful()) throw;
@@ -263,12 +272,3 @@ import "./Listing.sol";
    return true;
    }
    
-
-    
-    }
-                        
-    
-    
-    
-    
-    
