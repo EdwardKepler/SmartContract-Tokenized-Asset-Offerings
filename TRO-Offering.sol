@@ -2,6 +2,7 @@ pragma solidity ^0.4.20;
 import "./Listing.sol";
     contract Offering is Owned{
     // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]
+    // Smart Contract For Research Offering [TRO]
     address public offering = 0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db;
     string  public token1;
     string  public prePrice;
@@ -85,7 +86,6 @@ import "./Listing.sol";
           function getAssetDeliverables() public constant returns (string) {
           return (assetDeliverables);
           }
-          
           
             // Offering - Overview
           
