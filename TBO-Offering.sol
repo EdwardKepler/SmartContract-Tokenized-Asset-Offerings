@@ -53,11 +53,23 @@ import "./Listing.sol";
           function getToken() public constant returns (string) {
           return (token1);
           }
-          function setAddress(address _address) public {
+          function setTokenAddress(address _address) public {
           offering = _address;
           }
-          function getAddress() public constant returns (address) {
+          function getTokenAddress() public constant returns (address) {
           return (offering);
+          }
+          function setTokenPercentage(string _tokenPercentage) public {
+          tokenPercentage = _tokenPercentage;
+          }
+          function getTokenPercentage() public constant returns (string) {
+          return (tokenPercentage);
+          }
+          function setTokenDuration(string _tokenPercentage) public {
+          tokenDuration = _tokenDuration;
+          }
+          function getTokenDuration() public constant returns (string) {
+          return (tokenDuration);
           }
           
             // Asset - Overview
