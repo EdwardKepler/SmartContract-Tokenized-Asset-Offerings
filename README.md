@@ -15,9 +15,11 @@
 * Properties [ TBO-Offering.sol ]
 * Art [ TGO-Offering.sol]
 * Precious Metals [ TMO-Offering.sol ]
-* IP  [ TPO-Offering.sol]
+* Patents [ TPO-Offering.sol]
 * Research   [ TRO-Offering.sol ]
 * Technology [ TTO-Offering.sol ]
+* Equipment [ TEO-Offering.sol_]
+* Collectibles [_TCO-Offering.sol]
 
 ## Token Features
 * **Right:** Product Usage, Product Access, Voting
