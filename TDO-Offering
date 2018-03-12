@@ -3,7 +3,7 @@ pragma solidity ^0.4.20;
 import "./Listing.sol";
     contract Offering is Owned{
     // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]
-    // Smart Contract For Digital[Goods] Offering [TDO]
+    // Smart Contract For Data Offering [TDO]
     address public offering = 0x4b0897b0513fdc7c541b6d9d7e929c4e5364d2db;
     string  public token1;
     string  public prePrice;
@@ -44,7 +44,7 @@ import "./Listing.sol";
       _;
        }
            // [TAO] Tokenized Asset Offering 
-           // [TDO] Tokenized Digital Offering
+           // [TDO] Tokenized Data Offering
            // Tokenized - [ITO,TDO,TNO,TTO,TRO,TLO,TPO,TMO,TGO,TPO]
            
           function setToken(string token) public {
@@ -86,17 +86,17 @@ import "./Listing.sol";
           function getAssetIdentitiers() public constant returns (string) {
           return (assetIdentifier);
           }
-          function setDigitalLocation(string _digitalLocation) public {
+          function setDataLocation(string _dataLocation) public {
           digitalLocation = _digitalLocation;
           }
-          function getDigitalLocation() public constant returns (string) {
-          return (digitalLocation);
+          function getDataLocation() public constant returns (string) {
+          return (dataLocation);
           }
-          function setDigitalSubscription(string _digitalSubscription) public {
-          digitalSubscription = _digitalSubscription;
+          function setDataSubscription(string _dataSubscription) public {
+          digitalSubscription = _dataSubscription;
           }
-          function getDigitalSubscription() public constant returns (string) {
-          return (digitalSubscription);
+          function getDataSubscription() public constant returns (string) {
+          return (DataSubscription);
           }
           
           
