@@ -7,7 +7,7 @@
 
 ## Digital Assets
 * ITO (Initial Token Offering) [ ITO-Offering.sol ]
-* Digital Goods [ TDO-Offering.sol ]
+* Data [ TDO-Offering.sol ]
 * Domain Names  [ TNO-Offering.sol ]
 
 ## Real Assets
