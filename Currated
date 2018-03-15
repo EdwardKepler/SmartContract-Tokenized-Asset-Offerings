@@ -1,0 +1,59 @@
+pragma solidity ^0.4.20;
+import "./Offering.sol";
+import "./Listing.sol";
+
+    contract Currated is Offering{
+        
+    uint public fundingDuration;
+    uint public fundingGoal;
+    string public token;
+    
+    address[] public curratedOfferingList;
+    
+
+  
+
+function currantedOfferingListCount()
+    public
+    constant
+    returns(uint listCount)
+    {
+        return curratedOfferingList.length;
+    
+    }
+    
+    
+       function setCurrator(string _currator) public payable returns (string) {
+            currator = _currator;
+          }
+          function getCurrator() public constant returns (string) {
+             return (currator);  
+          } 
+          
+           function setCurratorBio(string _curratorBio) public payable returns (string) {
+            curratorBio = _curratorBio;
+          }
+          function getCurratorBio() public constant returns (string) {
+             return (curratorBio);  
+          } 
+    
+    
+    function Currated(uint fundingDuration,uint fundingGoal, string token) public payable{
+    //Create Offering
+    owner = Owned.owner;
+    token1 = token;
+    duration = block.number + fundingDuration;
+    goal = fundingGoal;
+    currator = currator;
+   
+    
+    
+
+  
+    }
+    
+    
+    
+    
+    }
+    
