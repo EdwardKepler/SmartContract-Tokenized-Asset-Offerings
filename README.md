@@ -9,6 +9,7 @@
 * ITO (Initial Token Offering) [ ITO-Offering.sol ]
 * Data [ TDO-Offering.sol ]
 * Domain Names  [ TNO-Offering.sol ]
+* Services [TSO-Offering.sol]
 
 ## Real Assets
 * Land [ TLO-Offering.sol ]
