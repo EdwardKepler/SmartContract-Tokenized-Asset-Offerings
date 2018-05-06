@@ -14,7 +14,7 @@
 ## Real Assets
 * Land [ TLO-Offering.sol ]
 * Properties [ TBO-Offering.sol ]
-* Art [ TGO-Offering.sol]
+* Fine Art [ TFO-Offering.sol]
 * Precious Metals [ TMO-Offering.sol ]
 * Patents [ TPO-Offering.sol]
 * Research   [ TRO-Offering.sol ]
