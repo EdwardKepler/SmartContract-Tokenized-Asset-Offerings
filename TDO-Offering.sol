@@ -11,7 +11,7 @@ import "./Owned.sol";\
 \
     contract Offering is Owned\{\
     // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]\
-    // Smart Contract For Tokenized Museum Offering [TMO]\
+    // Smart Contract For Tokenized Data Offering [TMO]\
     // Offering Address   0xca35b7d915458ef540ade6068dfe2f44e8fa733c\
     address public offering;\
     uint    public duration;\
@@ -23,31 +23,30 @@ import "./Owned.sol";\
     string  public token1;\
     uint public stake;\
     \
-	//"TokenizedBusinessOffering": \{\
-	//	"OfferingType": "TBO\'94,\
+	//"TokenizedDataOffering": \{\
+	//	"OfferingType": "TDO\'94,\
 	//	"OfferingAddress": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",\
-	//	"LandType": "Campground",\
-	//	"LandName": "Miller Campground",\
-	//	"Dimension": "200\'92\'92 X 3033\'92\'92",\
-	//	"Acres": "40",\
-	//	"Bought": "4/23/2018",\
-	//	"PhotosOfLand": "www.nm.org",\
-	//	"LandOwners": \{\
-	//		"LandOwner": "Edward Kepler"\
+	//	"DataType": "Machine Learning",\
+	//	"DataName": "Datatrain",\
+	//	"DataDescription": "1000 Images of Basil Plants",\
+	//	"Date": "2/23/2018",\
+	//	"Length": "1 day",\
+	//	"Location": "Minnesota",\
+	//	"Materials": "www.nm.org",\
+	//	"ServiceProviders": \{\
+	//		"ServiceProvider": "Edward Kepler"\
 	//	\},\
-	//	"Appraisal": "25,000,000",\
-	//	"AppraisorName": "James Lilly",\
-	//	"AppraisorDate": "01/23/2018",\
-	//	"CertificateOfOwnership": " www.iiio.com",\
-	//	"CertificateOfAuthenticity": "www.iiio.com",\
-	//	"Tokenization": "TAO",\
-	//	"EstimateOfLandValuation": "25,000,000",\
-	//	"PercentageForTokenization": "5%",\
-	//	"FundraisingTarget": "$1,000,000",\
-	//	"SettlementDate": "5/23/2018",\
-	//	"Rollover": "Yes",\
-	//	"ExitOption": "NA",\
-	//	"FundingPlan": "NA",\
+	//	"SoftCap": "5,000",\
+	//	"HardCap": "10,000",\
+	//	"PrePrice": ".08",\
+	//	"NumberOfToken": "5000",\
+	//	"Accepting": "Bitcoin,Litecoin",\
+	//  "Platform": "Ethereum",\
+	//  "Restricted": "NA",\
+	//  "Infolink": "NA",\
+    //  "Videolink": "NA",\
+    //  "Sponsor": "NA",\
+    //  "Matching": "100%",\
 	//\}\
 //\}"\
     \
@@ -62,7 +61,7 @@ import "./Owned.sol";\
       _;\
        \}\
            // [TAO] Tokenized Asset Offering \
-           // [TRO] Tokenized Business Offering\
+           // [TRO] Tokenized Service Offering\
            // Tokenized - [TAO,TBO,TCO,TDO,TEO,TGO,TKO,TLO,TMO,TPO,TRO,TSO,TTO]\
            \
           \
