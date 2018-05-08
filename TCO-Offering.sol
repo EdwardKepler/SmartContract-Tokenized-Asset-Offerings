@@ -4,7 +4,7 @@ import "./Owned.sol";
 
     contract Offering is Owned{
     // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]
-    // Smart Contract For Tokenized Museum Offering [TMO]
+    // Smart Contract For Tokenized Commonities Offering [TMO]
     // Offering Address   0xca35b7d915458ef540ade6068dfe2f44e8fa733c
     address public offering;
     uint    public duration;
@@ -16,8 +16,8 @@ import "./Owned.sol";
     string  public token1;
     uint public stake;
     
-	//"TokenizedLandOffering": {
-	//	"OfferingType": "TLO”,
+	//"TokenizedCommonitiesOffering": {
+	//	"OfferingType": "TCO”,
 	//	"OfferingAddress": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",
 	//	"CommodityType": "Corn Field",
 	//	"CommodityName": "Feed Corn",
@@ -55,7 +55,7 @@ import "./Owned.sol";
       _;
        }
            // [TAO] Tokenized Asset Offering 
-           // [TRO] Tokenized Land Offering
+           // [TRO] Tokenized Commonities Offering
            // Tokenized - [TAO,TBO,TCO,TDO,TEO,TGO,TKO,TLO,TMO,TPO,TRO,TSO,TTO]
            
           
