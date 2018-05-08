@@ -20,10 +20,10 @@
 * Commonities [_TCO-Offering.sol]
 
 ## Token Features
-* **Right:** Product Usage, Product Access, Voting
+* **Right:** Product Usage, Product Access, [Voting]
 * **Value Exchange:** Buy, Sell
 * **Toll:** Foundation Fees
 * **Currency:** Payment, Transaction
-* **Earnings:** Profit Share, Benefit Share
+* **Earnings:** [Profit Share, Benefit Share]
 
   www.taotoken.co
