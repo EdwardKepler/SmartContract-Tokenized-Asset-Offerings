@@ -6,21 +6,18 @@
   www.taofoundation.co
 
 ## Digital Assets
-* ITO (Initial Token Offering) [ ITO-Offering.sol ]
+* Digtial Assets (Token Asset Offering) [ TAO-Offering.sol ]
 * Data [ TDO-Offering.sol ]
-* Domain Names  [ TNO-Offering.sol ]
 * Services [TSO-Offering.sol]
 
 ## Real Assets
 * Land [ TLO-Offering.sol ]
-* Properties [ TBO-Offering.sol ]
-* Fine Art [ TFO-Offering.sol]
-* Precious Metals [ TMO-Offering.sol ]
-* Patents [ TPO-Offering.sol]
+* Business [ TBO-Offering.sol ]
+* Fine Art [ TMO-Offering.sol]
+* Properties [ TPO-Offering.sol]
 * Research   [ TRO-Offering.sol ]
-* Technology [ TTO-Offering.sol ]
 * Equipment [ TEO-Offering.sol_]
-* Collectibles [_TCO-Offering.sol]
+* Commonities [_TCO-Offering.sol]
 
 ## Token Features
 * **Right:** Product Usage, Product Access, Voting
