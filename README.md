@@ -6,7 +6,7 @@
   www.taofoundation.co
 
 ## Digital Assets
-* Digtial Assets [ TAO-Offering.sol ]
+* Digital Assets [ TAO-Offering.sol ]
 * Data [ TDO-Offering.sol ]
 * Services [TSO-Offering.sol]
 
