@@ -18,7 +18,7 @@ import "./Owned.sol";
     
 //	{
 //	"TokenizedMuseumOffering": {
-//		"OfferingType": "TGO”,
+//		"OfferingType": "TMO”,
 //		"OfferingAddress": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",
 //		"Artist": "Lambo Van Gough",
 //		"ArtworkName": "Crypto Cafe",
@@ -56,8 +56,8 @@ import "./Owned.sol";
       _;
        }
            // [TAO] Tokenized Asset Offering 
-           // [TRO] Tokenized Land Offering
-           // Tokenized - [TAO,TBO,TCO,TDO,TEO,TGO,TKO,TLO,TMO,TPO,TRO,TSO,TTO]
+           // [TRO] Tokenized Museum Offering
+           // Tokenized - [TAO,TBO,TCO,TDO,TEO,TLO,TMO,TPO,TRO,TSO]
            
           
     function fundingSuccessful() public constant returns(bool isSuccess){
