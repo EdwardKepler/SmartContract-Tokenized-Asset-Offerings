@@ -6,6 +6,7 @@ import "./Owned.sol";
     // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]
     // Smart Contract For Tokenized Museum Offering [TMO]
     // Offering Address   0xca35b7d915458ef540ade6068dfe2f44e8fa733c
+    // IPFS Address       QmYojPURsPPg9CKpN5ZRvyPyNR6obUZvXyqz
     address public offering;
     uint    public duration;
     uint    public goal;
@@ -15,7 +16,9 @@ import "./Owned.sol";
     bool    public tokenHolder;
     string  public token1;
     uint public stake;
-    
+//  TMO-Lambp Van Gough
+//  Location:IPSF
+//  Address:QmYojPURsPPg9CKpN5ZRvyPyNR6obUZvXyqz
 //	{
 //	"TokenizedMuseumOffering": {
 //		"OfferingType": "TMO”,
