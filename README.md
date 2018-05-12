@@ -22,8 +22,9 @@
 ## Token Features
 * **Right:** Product Usage, Product Access, [Voting]
 * **Value Exchange:** Buy, Sell
-* **Toll:** Foundation Fees
+* **Donations:** Foundation Fees
 * **Currency:** Payment, Transaction
 * **Earnings:** [Profit Share, Benefit Share]
+* **Downloads:** Contracts, Deliverables, Data, Content
 
   www.taotoken.co
