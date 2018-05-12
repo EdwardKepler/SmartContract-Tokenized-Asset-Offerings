@@ -6,16 +6,18 @@ import "./Owned.sol";
     // Smart Contract For Tokenized Asset Offerings -TAO Foundation [Edward Kepler]
     // Smart Contract For Tokenized Museum Offering [TMO]
     // Offering Address   0xca35b7d915458ef540ade6068dfe2f44e8fa733c
-    address public offering;
+    // IPFS Address QmYojPURsPPg9CKpN5ZRvyPyNR6obUZvXyqz
+    address public offering=0xca35b7d915458ef540ade6068dfe2f44e8fa733c;
     uint    public duration;
     uint    public goal;
-    
+    string public ipfs="QmYojPURsPPg9CKpN5ZRvyPyNR6obUZvXyqz";
     uint    public fundsRaised;
     bool    public refundSent;
     bool    public tokenHolder;
     string  public token1;
+    address public funder;
     uint public stake;
-    
+    // IPFS Address QmYojPURsPPg9CKpN5ZRvyPyNR6obUZvXyqz
 	//"TokenizedMuseumOffering": {
 	//	"OfferingType": "TGO”,
 	//	"OfferingAddress": "0xca35b7d915458ef540ade6068dfe2f44e8fa733c",
@@ -78,9 +80,14 @@ import "./Owned.sol";
     event LogRefund(address sender , uint amount);
     event LogFoundation(address foundation , uint fundingFee);
     
-    function Offering(uint _fundingDuration,uint _fundingGoal, string _token, uint _stake) public payable{
+    //*********************************************************************************************************************
+	// constructor, will create an initial project.
+	//*********************************************************************************************************************
+    
+    function Offering(string _token, uint _stake, uint _fundingDuration,uint _fundingGoal, string _ipfs) public payable{
     //Create Offering
     offering = 0xca35b7d915458ef540ade6068dfe2f44e8fa733c;
+    ipfs =_ipfs;
     owner = Owned.owner;
     token1 = _token;
     duration = block.number + _fundingDuration;
@@ -102,6 +109,7 @@ import "./Owned.sol";
      return true;
     
      }
+     
 
    function withdrawlFees() public payable returns(bool success)
    {
@@ -109,6 +117,7 @@ import "./Owned.sol";
    uint foundationFee;
    uint fundingAmount;
    uint finalAmount;
+   
    if(msg.sender != owner) throw;
    if(!fundingSuccessful()) throw;
    if(tokenHolder == true)
@@ -140,7 +149,38 @@ import "./Owned.sol";
    return true;
    }
    
-
+   function sendRefunds() public payable returns (bool success){
+       if(msg.sender != owner) throw;
+       if(fundingFailed()) throw;
+       
+       uint funderCount = funderStructs.length;
+       for(uint i=0; i<funderCount; i++)
+       {
+           funderStructs[i].funder.send(funderStructs[i].amount);
+       }
+       return true;
+       }
+   
+   
+     function sendDeliverables() public payable returns (string ipfs){
+       ipfs="0xc19616f23597eEf6BC15CeFA3092d4B797568185";
+       if(!fundingSuccessful()) throw;
+       uint funderCount = funderStructs.length;
+       for(uint i=0; i<funderCount; i++)
+       {
+           address f=funderStructs[i].funder;
+           if(msg.sender != f){
+               return ipfs;
+               
+           }
+       }
+       
+       }
+    }
+   
+   
+   
+   
    
    
     
@@ -149,4 +189,3 @@ import "./Owned.sol";
  
 
    
-}
