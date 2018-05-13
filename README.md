@@ -25,7 +25,7 @@
 * **Value Exchange:** Buy, Sell
 * **Donations:** Foundation Fees
 * **Currency:** Payment, Transaction
-* **Earnings:** [Profit Share, Benefit Share]
+* **Earnings:** Profit Share
 * **Downloads:** Contracts, Deliverables, Data, Content
 
   www.taotoken.co
