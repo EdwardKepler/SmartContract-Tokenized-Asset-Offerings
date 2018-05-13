@@ -20,7 +20,8 @@
 * Commonities [_TCO-Offering.sol]
 
 ## Token Features
-* **Right:** Product Usage, Product Access, [Voting]
+* **Right:** Product Usage, Product Access
+* **Voting:** Candidates, Approvals
 * **Value Exchange:** Buy, Sell
 * **Donations:** Foundation Fees
 * **Currency:** Payment, Transaction
