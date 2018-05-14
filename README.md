@@ -27,6 +27,6 @@
 * **Currency:** Payment, Transaction
 * **Earnings:** Revenue Share
 * **Downloads:** Contracts, Deliverables, Data, Content
-* **Advanced:** Staked, Shared, Sponsored, Taxed
+* **Advanced:** Staked, Shared, Sponsored, Donated, Taxed
 
   www.taotoken.co
