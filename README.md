@@ -19,7 +19,7 @@
 * Equipment [ TEO-Offering.sol_]
 * Commonities [_TCO-Offering.sol]
 
-## Token Features
+## Platform Features
 * **Right:** Product Usage, Product Access
 * **Voting:** Candidates, Approvals
 * **Value Exchange:** Buy, Sell
@@ -27,5 +27,6 @@
 * **Currency:** Payment, Transaction
 * **Earnings:** Revenue Share
 * **Downloads:** Contracts, Deliverables, Data, Content
+* **Advanced:** Staking,Sponsor
 
   www.taotoken.co
