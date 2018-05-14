@@ -19,14 +19,15 @@
 * Equipment [ TEO-Offering.sol_]
 * Commonities [_TCO-Offering.sol]
 
-## Platform Features
-* **Right:** Product Usage, Product Access
+## TAO Platform Features
+* **Rights:** Product Usage, Product Access
 * **Voting:** Candidates, Approvals
 * **Value Exchange:** Buy, Sell
 * **Donations:** Foundation Fees
 * **Currency:** Payment, Transaction
 * **Earnings:** Revenue Share
 * **Downloads:** Contracts, Deliverables, Data, Content
-* **Advanced:** Staked, Shared, Sponsored, Donated, Matched, Taxed
+* **Management:** Staked, Shared, Sponsored, Donated, Matched, Taxed
+* **Treasury:** [Owned, Trusted, Vaulted, Verified, Insured]
 
   www.taotoken.co
