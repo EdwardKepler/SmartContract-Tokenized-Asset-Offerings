@@ -28,6 +28,6 @@
 * **Earnings:** Revenue Share
 * **Downloads:** Contracts, Deliverables, Data, Content
 * **Management:** Staked, Shared, Sponsored, Donated, Matched, Taxed
-* **Treasury:** [Owned, Trusted, Vaulted, Verified, Insured]
+* **Treasury:** [Owned, Trusted, Vaulted]
 
   www.taotoken.co
